@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Edit Entry {{entry}}
+{% endblock %}
+
+{% block body %}
+    <form action="{% url 'encyclopedia:edit' entry %}" method="POST">
+        {% csrf_token %}
+        <h1>{{ entry }}</h1>
+        <table class="space">
+            <textarea name="content" cols="100" required id="id_content">{{content}}</textarea>
+        </table>
+        <div class="space">
+           <input type="submit" value="Confirm Change">
+        </div>
+    </form>
+{% endblock %}

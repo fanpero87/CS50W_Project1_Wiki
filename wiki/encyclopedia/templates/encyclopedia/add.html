@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Add Entry
+{% endblock %}
+
+{% block body %}
+    <form action="{% url 'encyclopedia:add' %}" method="POST">
+        {% csrf_token %}
+        <table class="space">
+            {{ form }}
+        </table>
+        <div class="space">
+           <input type="submit" value="Add Entry">
+        </div>
+    </form>
+{% endblock %}

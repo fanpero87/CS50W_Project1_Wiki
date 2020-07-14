@@ -1,0 +1,25 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block body %}
+    <div>
+        <div>
+            <h3>Matching Results ({{ count }})</h3>
+        </div>
+    </div>
+    <hr>
+    <ul>
+        {% for entry in entries %}
+        <li>
+            <a href="{% url 'encyclopedia:entry' entry %}">{{ entry }}</a>
+        </li>
+        {% empty %}
+        No matching entry found...
+        {% endfor %}
+    </ul>
+
+{% endblock %}
