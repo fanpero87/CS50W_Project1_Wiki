@@ -5,3 +5,6 @@ Project 1: Wiki
 What to do: Design a Wikipedia-like online encyclopedia
 
 [How it works] (https://www.youtube.com/watch?v=jTEIWqpFwBc)
+
+WebApp hosted on Heroku
+https://cs50w-django-wiki.herokuapp.com
