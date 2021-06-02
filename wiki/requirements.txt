@@ -1,6 +1,6 @@
 
 asgiref==3.3.1
-Django==3.1.5
+Django==3.1.8
 markdown2>=2.4.0
 psycopg2==2.8.6
 pytz==2020.5
